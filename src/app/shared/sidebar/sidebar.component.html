@@ -13,25 +13,27 @@
                         <li><a href="javascript:void()">My Profile </a></li>
                         <li><a href="javascript:void()">My Balance</a></li>
                         <li><a href="javascript:void()">Inbox</a></li>
-                        <li><a routerLink="account-settings" routerLinkActive="active" >Account Setting</a></li>
+                        <li><a routerLink="account-settings" routerLinkActive="active">Account Setting</a></li>
                         <li><a routerLink="/login">Logout</a></li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>
                 <li class="nav-small-cap">PERSONAL</li>
                 <li *ngFor="let option of menuItems">
-                  <a class="has-arrow waves-effect waves-dark" [routerLink]="option.path" routerLinkActive="active" aria-expanded="false">
-                    <i [class]="option.icon"></i>
-                    <span class="hide-menu">
+                    <a class="has-arrow waves-effect waves-dark" [routerLink]="option.path" routerLinkActive="active" aria-expanded="false">
+                        <i [class]="option.icon"></i>
+                        <span class="hide-menu">
                       {{ option.title }}
                       <span class="label label-rouded label-themecolor pull-right">{{ option.children.length }}</span>
-                    </span>
-                  </a>
-                  <ul aria-expanded="false" class="collapse">
-                      <li *ngFor="let child of option.children">
-                        <a [routerLink]="child.path" routerLinkActive="active" >{{ child.title }}</a>
-                      </li>
-                  </ul>
+                        </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li *ngFor="let child of option.children">
+                            <a [routerLink]="child.path" routerLinkActive="active" [routerLinkActiveOptions]="{
+                          exact: true
+                        }">{{ child.title }}</a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav>

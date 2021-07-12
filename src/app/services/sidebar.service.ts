@@ -12,8 +12,10 @@ export class SidebarService {
         path: '/',
         children: [
           { title: 'Main', path: '/' },
+          { title: 'Chart', path: 'charts' },
           { title: 'Progress', path: 'progress' },
-          { title: 'Chart', path: 'charts' }
+          { title: 'Promesas', path: 'promises' },
+          { title: 'RXJS', path: 'rxjs' }
         ]
       }
   ];
