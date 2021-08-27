@@ -41,6 +41,7 @@ Login register and recover password Page
     width: 100%;
     padding: 10% 0;
     position: fixed;
+    overflow-y: auto !important;
 }
 
 .login-box {

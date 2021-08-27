@@ -7,11 +7,13 @@ import { AuthModule } from './auth/auth.module';
 
 import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+import { FnPasswordsIgualesDirective } from './directives/fn-passwords-iguales.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NopagefoundComponent
+    NopagefoundComponent,
+    FnPasswordsIgualesDirective
   ],
   imports: [
     BrowserModule,
